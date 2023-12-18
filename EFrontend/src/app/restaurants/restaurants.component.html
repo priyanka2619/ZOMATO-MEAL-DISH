@@ -1,0 +1,42 @@
+<div class="container mt-4">
+    <h1 class="text-centermb-4">Food Item List</h1>
+    <div class="row">
+        <div class="col-4" *ngFor="let item of restaurantItems">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-5">
+                            <img [src]="item.image" class="card-img-top" alt="{{item.image}}">
+                            <p class="card-title text-right"></p>
+                        </div>
+                        <div class="col-7 text-end">
+                            <h4 class="card-title">{{item.menu_item_name}}</h4>
+                            <h6 class="card-title">{{item.price}}</h6>
+                            <button class="btn btn-sm btn-success" (click)="openCartModal(item)">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="modal" tabindex="-1" id="addToCart">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Quantity</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <label>Enter Quantity</label>
+                <input type="text" placeholder="Quantity" [(ngModel)]="quantity" class="form-control">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" (click)="placeOrder()">Add Item</button>
+            </div>
+        </div>
+    </div>
+</div>

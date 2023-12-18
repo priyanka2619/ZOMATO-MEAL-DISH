@@ -1,0 +1,37 @@
+<div class="row m-2" *ngIf="foodItemList && foodItemList.length > 0">
+    <div class="col-3 p-2" *ngFor="let item of foodItemList">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-3">
+                        <!-- <img src="restaurant.image" alt=""> -->
+                        <img src="assets/images/margherita.jpg" alt="" height="80px">
+                    </div>
+                    <div class="col-9 text-end">
+                        {{item.menu_item_name}}
+                        <br>
+                        <small>{{item.description |slice:0-20}}</small>
+                        <br>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-4 pt-2 px-3">
+                        <i class="fa fa-inr" aria-hidden="true"></i>{{item.price}}
+                    </div>
+                    <!-- <div class="col-4 text-center"></div> -->
+                    <div class="col-8 text-end">
+                        <button class="btn btn-primary" (click)="addToCart(item.id)" [disabled]="!item.availability">Add
+                            to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row not-found" *ngIf="!foodItemList || foodItemList.length === 0">
+    <div class="col-12">
+        <p>No Restaurant Serving Food Items</p>
+    </div>
+</div>

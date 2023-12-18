@@ -1,0 +1,20 @@
+.text-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.text-md {
+    font-size: 20px;
+}
+
+.text-lg {
+    font-size: 25px;
+}
+
+.not-found {
+    text-align: center;
+    position: relative;
+    top: 100px;
+    font-size: 25px;
+}

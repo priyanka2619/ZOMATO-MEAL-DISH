@@ -1,0 +1,33 @@
+/* alert.component.css */
+
+.success,
+.error,
+.warning {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    /* color: white; */
+    /* font-weight: bold; */
+    font-size: 18px;
+    z-index: 1000;
+}
+
+.success {
+    color: green;
+    background-color: rgb(201, 247, 201);
+    /* Green */
+}
+
+.error {
+    color: rgb(241, 50, 50);
+    background-color: rgb(215, 123, 123);
+    /* Red */
+}
+
+.warning {
+    color: yellow;
+    background-color: rgb(236, 236, 169);
+    /* Yellow */
+}

@@ -1,0 +1,58 @@
+.card {
+    border: none;
+    width: 400px;
+    margin: auto;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.text-center h1 {
+    color: #282a2bf2;
+    /* Dark color for headings */
+}
+
+h6 {
+    color: #ced4da;
+}
+
+label {
+    color: #6c757d;
+    /* Slightly lighter color for labels */
+}
+
+/* Style the input fields */
+.form-control {
+    background-color: #f8f9fa;
+    /* Light gray background for input fields */
+    color: #495057;
+    /* Dark color for text in input fields */
+    border: 1px solid #ced4da;
+    /* Border color */
+    border-radius: 5px;
+    margin-bottom: 20px;
+    /* Add some spacing between input fields */
+}
+
+/* Style the submit button */
+.btn-dark {
+    background-color: #343a40;
+    color: white;
+    border: 1px solid #343a40;
+    border-radius: 5px;
+}
+
+/* Style the submit button on hover */
+.btn-dark:hover {
+    background-color: #292b2c;
+    border-color: #292b2c;
+}
+
+.cart-center {
+    position: relative;
+    top: 70px;
+}
+
+.para {
+    color: #00000075;
+}

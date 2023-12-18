@@ -1,0 +1,34 @@
+<div class="row m-2" *ngIf="restaurantList && restaurantList.length > 0">
+    <div class="col-3 p-2" *ngFor="let restaurant of restaurantList">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-3">
+                        <!-- <img src="restaurant.image" alt=""> -->
+                        <img src="assets/images/margherita.jpg" alt="" height="150px">
+                    </div>
+                    <div class="col-9 text-end pe-5 text-md">
+                        {{restaurant.category_name}}
+                    </div>
+
+                </div>
+                <div class="row mx-1">
+                    <div class="col-8 text-lg px-2">
+                        {{restaurant.restaurant_name}}
+                    </div>
+                    <!-- <div class="col-4 text-center"></div> -->
+                    <div class="col-4 text-end">
+                        <button class="btn btn-primary" (click)="navigateToOrder(restaurant.restaurant_id)"
+                            [disabled]="!restaurant.availability">Order</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row not-found" *ngIf="!restaurantList || restaurantList.length === 0">
+    <div class="col-12">
+        <p>No Restaurant Serving Foods</p>
+    </div>
+</div>

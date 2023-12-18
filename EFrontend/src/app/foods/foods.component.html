@@ -1,0 +1,13 @@
+<div class="row m-2">
+    <div class="col-3 p-2" *ngFor="let category of foodCategoryList">
+
+        <div class="card" (click)="navigateToRestaurant(category.category_id)">
+            <img [src]="getImageUrl(category)" class="card-img-top image-size" alt="">
+            <div class="card-body">
+                <h5 class="card-title">{{category.category_name}}</h5>
+                <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+            </div>
+        </div>
+    </div>
+</div>

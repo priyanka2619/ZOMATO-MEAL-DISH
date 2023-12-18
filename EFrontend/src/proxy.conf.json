@@ -1,0 +1,11 @@
+{
+    "/api": {
+        "target": "http://locahost:8000/",
+        "secure": false,
+        "pathRewrite": {
+            "^/api": ""
+        },
+        "changeOrigin": false,
+        "loglevel": "debug"
+    }
+}

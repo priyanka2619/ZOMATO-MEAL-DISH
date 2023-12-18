@@ -1,0 +1,19 @@
+.search-form .input-group-text {
+    transition: all 0.3s;
+}
+
+.search-form .input-group-text.rounded-end {
+    border-radius: 0 0.375rem 0.375rem 0;
+}
+
+.search-form .form-control {
+    border-radius: 0.375rem 0 0 0.375rem;
+}
+
+.border-radius {
+    border-radius: 20px;
+}
+
+.bg-nav {
+    background-color: #c2c9c954 !important;
+}
